@@ -1,1 +1,60 @@
-/*  your css code here. If applicable */
+/* your css code here. If applicable */
+.container {
+    padding: 10px;
+    margin: 10px;
+}
+
+input {
+    margin: 4px;
+}
+
+.cell {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.board {
+    background-color: pink;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 156px;
+    margin: 20px auto;
+}
+
+.message {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px 0;
+    min-height: 30px;
+}
+
+#submit {
+    padding: 8px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+#player-1, #player-2 {
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+/* Hide game board initially */
+#game-board {
+    display: none;
+}
+
+/* Show game board when game starts */
+#game-board.active {
+    display: block;
+}
