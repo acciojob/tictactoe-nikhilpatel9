@@ -15,7 +15,7 @@ function solve(p1, p2) {
     tag = false;
     gameActive = true;
     
-    for (let i = 0; i <= 8; i++) {
+    for (let i = 1; i <= 9; i++) {
         const cell = document.getElementById(`${i}`);
         cell.textContent = '';
         cell.style.backgroundColor = '';
@@ -24,7 +24,7 @@ function solve(p1, p2) {
     
     msg.textContent = `${p1}, you're up`;
     
-    for (let i = 0; i <= 8; i++) {
+    for (let i = 1; i <= 9; i++) {
         const btn = document.getElementById(`${i}`);
         const newBtn = btn.cloneNode(true);
         btn.parentNode.replaceChild(newBtn, btn);
@@ -64,7 +64,7 @@ function solve(p1, p2) {
             }
             
             let allFilled = true;
-            for (let j = 0; j <= 8; j++) {
+            for (let j = 1; j <= 9; j++) {
                 const cell = document.getElementById(`${j}`);
                 if (cell.textContent != 'X' && cell.textContent != 'O') {
                     allFilled = false;
@@ -80,8 +80,12 @@ function solve(p1, p2) {
 }
 
 function check() {
-    const arr = [[0, 1, 2], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [3, 4, 5], [6, 7, 8], [2, 4, 6]];
-    for (let i = 0; i < arr.length; i++) {
+     const arr = [
+        [1, 2, 3], [4, 5, 6], [7, 8, 9],
+        [1, 4, 7], [2, 5, 8], [3, 6, 9],
+        [1, 5, 9], [3, 5, 7]
+    ];
+	for (let i = 0; i < arr.length; i++) {
         let flagx = true, flago = true;
         for (let j = 0; j < 3; j++) {
             const val = document.getElementById(`${arr[i][j]}`);
