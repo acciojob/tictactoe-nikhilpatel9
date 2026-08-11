@@ -9,6 +9,7 @@ input {
 }
 
 .cell {
+	 font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     text-align: center;
     display: flex;
     align-items: center;
